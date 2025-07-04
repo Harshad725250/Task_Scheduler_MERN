@@ -24,6 +24,11 @@ mongoose
   .then(() => console.log("MongoDB connected successfully"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
+(async () => {
+  await import('./reminderScheduler.js');
+})();
+
+
 // Basic Route for testing
 app.get("/", (req, res) => {
   res.send("Task Manager API is running!");

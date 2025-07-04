@@ -31,13 +31,15 @@ const createTask = async (req, res) => {
 
   try {
     const newTask = await Task.create({
-      userId: req.user._id, // Assign task to the authenticated user
+      userId: req.user._id,
       title,
       description,
       dueDate,
       priority,
       reminder,
-    });
+      reminderSent: false, // ADD THIS
+  });
+
     res.status(201).json(newTask); // 201 Created
   } catch (error) {
     console.error("Error creating task:", error);
