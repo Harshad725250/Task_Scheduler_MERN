@@ -7,7 +7,7 @@ html, body, #root {
 }
 
 .auth-page {
-  padding-top: 80px;
+  padding-top: 80px; 
   min-height: 100vh;
 }
 
@@ -291,10 +291,16 @@ html, body, #root {
   font-size: 0.95rem;
   transition: all 0.3s ease;
   box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   position: relative;
   z-index: 2;
+  color: #1f2937;
+}
+
+.form-input::placeholder {
+  color: #9ca3af;
+  opacity: 1;
 }
 
 .form-input:focus {
@@ -302,6 +308,73 @@ html, body, #root {
   border-color: transparent;
   transform: translateY(-1px);
   box-shadow: 0 8px 20px rgba(102, 126, 234, 0.25);
+  color: #1f2937;
+}
+
+.form-input:disabled {
+  background-color: rgba(249, 250, 251, 0.8);
+  cursor: not-allowed;
+  color: #6b7280;
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.6rem;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+  color: #1f2937;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-textarea::placeholder {
+  color: #9ca3af;
+  opacity: 1;
+}
+
+.form-textarea:focus {
+  outline: none;
+  border-color: transparent;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.25);
+  color: #1f2937;
+}
+
+.form-select {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.6rem;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+  color: #1f2937;
+  cursor: pointer;
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: transparent;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.25);
+  color: #1f2937;
+}
+
+.form-select option {
+  color: #1f2937;
+  background: white;
 }
 
 .form-input:focus + .input-glow {
@@ -360,7 +433,7 @@ html, body, #root {
 }
 
 .checkbox-label {
-  color: #6b7280;
+  color: #4b5563;
   cursor: pointer;
   font-weight: 500;
 }
@@ -541,7 +614,7 @@ html, body, #root {
 .auth-link {
   text-align: center;
   font-size: 0.9rem;
-  color: #6b7280;
+  color: #4b5563;
   margin-top: 1rem;
 }
 
